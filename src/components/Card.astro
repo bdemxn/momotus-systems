@@ -1,0 +1,21 @@
+---
+interface Props {
+  text: string;
+  image: string;
+  title: string;
+}
+
+const { text, image, title } = Astro.props;
+---
+
+<section class="flex flex-col md:flex-row justify-between gap-10 mx-5 md:mx-20 my-10 border rounded-xl p-8 border-slate-200 font-inter">
+  <aside>
+    <p class="text-xs md:text-base font-bold mb-5">
+      {title}
+    </p>
+    <p class="text-xs md:text-base">
+      {text}
+    </p>
+  </aside>
+  <img src={image} alt="img" class="w-10 mx-auto my-auto md:w-12" />
+</section>

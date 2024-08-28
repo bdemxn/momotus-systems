@@ -1,0 +1,134 @@
+---
+import Layout from "../layout/Layout.astro";
+import { data } from "../data/data.js";
+import { Card } from "../components";
+---
+
+<Layout>
+  <main class="font-inter">
+    <section class="text-center text-xl mx-5 md:text-3xl font-semibold mt-20">
+      <p>
+        Tecnología que
+        <span
+          class="bg-clip-text leading-normal text-transparent css-orange font-extrabold"
+        >
+          transforma
+        </span>, seguridad que <span
+          class="bg-clip-text leading-normal text-transparent css-purple font-extrabold"
+          >protege</span
+        >, soluciones que <span
+          class="bg-clip-text leading-normal text-transparent css-gradient font-extrabold"
+          >impulsan.</span
+        >
+      </p>
+    </section>
+
+    <section class="flex justify-center mx-10">
+      <article class="grid grid-cols-1 md:grid-cols-2 text-center items-center gap-10 mt-20">
+        <img src="/src/img/server.png" alt="server" class="mx-auto my-auto" />
+        <aside>
+          <p class="">
+            En Momotus, brindamos soluciones tecnológicas integrales para
+            empresas pequeñas y medianas, con un enfoque en seguridad,
+            escalabilidad y personalización. Nuestros servicios cubren todas las
+            necesidades digitales clave para que tu negocio crezca de forma
+            eficiente y segura
+          </p>
+        </aside>
+      </article>
+    </section>
+
+    <section class="mt-32">
+      {
+        data.map((dat) => (
+          <Card title={dat.title} text={dat.text} image={dat.img} />
+        ))
+      }
+    </section>
+
+    <img
+      src="/src/img/down-arrow.svg"
+      alt="down"
+      class="mx-auto my-auto w-5 md:w-10"
+    />
+
+    <!-- What's Proton -->
+    <section class="text-center mt-20 mx-5">
+      <p class="text-lg md:text-2xl font-bold">¿Qué es Proton?</p>
+      <p>
+        Proton es una plataforma de servicios seguros centrados en la
+        privacidad. Ofrece correo electrónico encriptado de extremo a extremo y
+        VPN para garantizar la confidencialidad y seguridad de tus
+        comunicaciones y navegación.
+      </p>
+      <img
+        src="/src/img/mail.svg"
+        alt="proton"
+        class="mx-auto my-auto w-28 mt-8"
+      />
+
+      <!-- Proton's features -->
+      <section class="mt-10 mx-5">
+        <p class="text-lg md:text-2xl font-bold">Caracteristicas de Proton:</p>
+        <ul>
+          <li>
+            <span class="font-bold">Proton Mail:</span> Correo cifrado de extremo
+            a extremo.
+          </li>
+          <li>
+            <span class="font-bold">Proton VPN:</span> Navegación privada y segura
+            sin registro de actividad.
+          </li>
+          <li>
+            <span class="font-bold">Protección avanzada:</span> Seguridad suiza y
+            cumplimiento con la privacidad global.
+          </li>
+          <li>
+            <span class="font-bold">Interfaz intuitiva:</span> Fácil de usar, sin
+            comprometer la seguridad.
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <hr class="mx-10 my-20" />
+
+    <!-- What's NextCloud -->
+    <section class="text-center mt-20 mx-5">
+      <p class="text-lg md:text-2xl font-bold">¿Qué es NextCloud?</p>
+      <p>
+        NextCloud es una solución de almacenamiento y colaboración en la nube
+        que permite a las empresas gestionar archivos, calendarios y contactos
+        de manera segura y privada.
+      </p>
+      <img
+        src="/src/img/nextcloud.svg"
+        alt="nextcloud"
+        class="mx-auto my-auto w-28 mt-8"
+      />
+
+      <!-- NextCloud's features -->
+      <section class="mt-10 mx-5">
+        <p class="text-lg md:text-2xl font-bold">Caracteristicas de NextCloud:</p>
+        <ul>
+          <li>
+            <span class="font-bold">Almacenamiento en la nube:</span> Control total
+            sobre tus datos.
+          </li>
+          <li>
+            <span class="font-bold">Colaboración:</span> Edición de documentos, calendarios
+            y más en equipo.
+          </li>
+          <li>
+            <span class="font-bold">Seguridad: </span> Cifrado y control de acceso
+            para proteger la información.
+          </li>
+          <li>
+            <span class="font-bold">Integración flexible:</span> Compatible con una
+            amplia gama de apps y servicios.
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+</Layout>

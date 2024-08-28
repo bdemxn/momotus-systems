@@ -1,0 +1,109 @@
+---
+import Layout from "../layout/Layout.astro";
+import { Button, Benefits, Process } from "../components";
+import "animate.css";
+---
+
+<Layout>
+	<!-- Momotus hero -->
+	<section class="text-center font-inter">
+		<p class="font-extrabold text-2xl md:text-5xl mt-24">
+			<span class="bg-clip-text leading-normal text-transparent css-gradient"
+				>Soluciones web integrales</span
+			>
+			para tu negocio.
+		</p>
+		<section class="text-xs mt-3 mx-2 md:mt-0 md:mx-0 sm:text-base font-medium">
+			<p>
+				Impulsa tu negocio con páginas web únicas, tiendas en línea seguras y
+			</p>
+			<p>soluciones de seguridad que protegen tu futuro digital.</p>
+		</section>
+
+		<section class="mt-10">
+			<Button text="Cotiza tu proyecto" link="/contact" />
+		</section>
+
+		<!-- Our services -->
+		<article class="flex justify-center">
+			<section
+				class="grid grid-cols-1 gap-5 md:grid-cols-3 mt-20 place-items-center"
+			>
+				<div>
+					<img src="/src/img/ecommerce.png" alt="ecommerce" />
+					<p class="mt-1 md:mt-3 text-xs md:text-sm">Comercio electrónico</p>
+				</div>
+				<div>
+					<img src="/src/img/website.png" alt="website" />
+					<p class="mt-1 md:mt-3 text-xs md:text-sm">Creación de Sitios Web</p>
+				</div>
+				<div>
+					<img src="/src/img/security.png" alt="security" />
+					<p class="mt-1 md:mt-3 text-xs md:text-sm">Seguridad y Estándares de Seguridad</p>
+				</div>
+			</section>
+		</article>
+	</section>
+
+	<img
+		src="/src/img/down-arrow.svg"
+		alt="arrow"
+		class="mx-auto my-auto w-5 md:w-10 mt-24"
+	/>
+
+	<!-- Why Momotus? -->
+	<section class="mt-10 font-inter">
+		<p class="text-xl md:text-3xl font-semibold font-inter text-center">
+			¿Por qué elegir Momotus Systems?
+		</p>
+
+		<article class="flex justify-around">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-14 mt-20">
+				<img src="/src/img/why.png" alt="whyus" class="h-44 md:h-80 mx-auto my-auto" />
+
+				<!-- Benefits to hire Momotus -->
+				<Benefits />
+			</div>
+		</article>
+	</section>
+
+	<!-- Our Services -->
+	<section class="text-center font-inter mt-20">
+		<p class="text-xl md:text-3xl font-semibold">Nuestros Servicios</p>
+		<p class="text-xs sm:text-base">
+			Desarrolla tu negocio con soluciones digitales seguras y personalizadas
+			con una infraestructura segura y robusta.
+		</p>
+		<div class="flex justify-center gap-10 mt-10 mb-16">
+			<img src="/src/img/programming.svg" alt="website" class="w-10 md:w-16" />
+			<img src="/src/img/proton.svg" alt="proton" class="w-24 sm:w-32"/>
+			<img src="/src/img/nextcloud.svg" alt="nextcloud" class="w-10 md:w-16" />
+		</div>
+		<Button link="/services" text="Más información" />
+
+		<img
+			src="/src/img/down-arrow.svg"
+			alt="arrow"
+			class="mx-auto my-auto w-5 md:w-10 mt-16"
+		/>
+	</section>
+
+	<!-- How we work -->
+	<section class="text-center font-inter mt-10 mx-10 md:mx-auto">
+		<p class="text-xl md:text-3xl font-semibold">¿Cómo trabajamos?</p>
+		<p class="text-xs md:text-base mt-2">
+			En Momotus, hacemos que todo el proceso sea sencillo y claro para ti. Te
+			acompañamos desde el
+		</p>
+		<p class="text-xs md:text-base">
+			inicio hasta después de la entrega, asegurándonos de que todo funcione
+			perfectamente.
+		</p>
+	</section>
+
+	<Process />
+
+	<section class="flex justify-center mt-10">
+		<Button text="Contactános" link="/contact"/>
+	</section>
+</Layout>
