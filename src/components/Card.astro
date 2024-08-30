@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   text: string;
-  image: string;
+  image: ImageMetadata;
   title: string;
 }
 
@@ -17,5 +19,5 @@ const { text, image, title } = Astro.props;
       {text}
     </p>
   </aside>
-  <img src={image} alt="img" class="w-10 mx-auto my-auto md:w-12" />
+  <Image src={image} alt="image" inferSize class="w-10 mx-auto my-auto md:w-12" />
 </section>

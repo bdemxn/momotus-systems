@@ -2,6 +2,9 @@
 import Layout from "../layout/Layout.astro";
 import { data } from "../data/data.js";
 import { Card } from "../components";
+import { Image } from "astro:assets";
+import { downArrow, mail, nextcloud, server } from "../img";
+import "../styles/index.css";
 ---
 
 <Layout>
@@ -25,7 +28,7 @@ import { Card } from "../components";
 
     <section class="flex justify-center mx-10">
       <article class="grid grid-cols-1 md:grid-cols-2 text-center items-center gap-10 mt-20">
-        <img src="/src/img/server.png" alt="server" class="mx-auto my-auto" />
+        <Image src={server} alt="server" class="mx-auto my-auto" />
         <aside>
           <p class="">
             En Momotus, brindamos soluciones tecnológicas integrales para
@@ -46,8 +49,8 @@ import { Card } from "../components";
       }
     </section>
 
-    <img
-      src="/src/img/down-arrow.svg"
+    <Image
+      src={downArrow}
       alt="down"
       class="mx-auto my-auto w-5 md:w-10"
     />
@@ -61,8 +64,8 @@ import { Card } from "../components";
         VPN para garantizar la confidencialidad y seguridad de tus
         comunicaciones y navegación.
       </p>
-      <img
-        src="/src/img/mail.svg"
+      <Image
+        src={mail}
         alt="proton"
         class="mx-auto my-auto w-28 mt-8"
       />
@@ -101,8 +104,8 @@ import { Card } from "../components";
         que permite a las empresas gestionar archivos, calendarios y contactos
         de manera segura y privada.
       </p>
-      <img
-        src="/src/img/nextcloud.svg"
+      <Image
+        src={nextcloud}
         alt="nextcloud"
         class="mx-auto my-auto w-28 mt-8"
       />

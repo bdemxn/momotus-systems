@@ -5,13 +5,14 @@ body {
 }
 
 .font-inter {
-  color: black;
   font-family: "Inter", sans-serif;
 }
 
 .css-gradient {
   background: linear-gradient(323deg, #000000, #94a3b8);
   background-size: 400% 400%;
+  background-clip: text;
+  color: transparent;
 
   -webkit-animation: AnimationName 37s ease infinite;
   -moz-animation: AnimationName 37s ease infinite;
@@ -43,6 +44,8 @@ body {
 .css-orange {
   background: linear-gradient(270deg, #ffa62b, #ff9400, #e48500);
   background-size: 600% 600%;
+  background-clip: text;
+  color: transparent;
 
   -webkit-animation: AnimationName 37s ease infinite;
   -moz-animation: AnimationName 37s ease infinite;
@@ -74,6 +77,8 @@ body {
 .css-purple {
   background: linear-gradient(270deg, #972bff, #af00ff, #a700e4);
   background-size: 600% 600%;
+  background-clip: text;
+  color: transparent;
 
   -webkit-animation: AnimationName 37s ease infinite;
   -moz-animation: AnimationName 37s ease infinite;

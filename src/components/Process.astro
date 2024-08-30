@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import { opensource } from "../img";
+---
+
 <section class="text-center mt-10 font-inter">
   <div class="mt-16">
     <p class="font-semibold">Consulta Inicial</p>
@@ -34,5 +39,5 @@
     </p>
   </div>
 
-  <img src="/src/img/opensource.svg" alt="opensource" class="w-12 mt-20 mx-auto my-auto">
+  <Image src={opensource} alt="opensource" class="w-12 mt-20 mx-auto my-auto">
 </section>

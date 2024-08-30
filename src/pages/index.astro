@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layout/Layout.astro";
 import { Button, Benefits, Process } from "../components";
-import "animate.css";
+import { ecommerce, website, security, downArrow, why, proton, nextcloud, programming } from "../img";
+import "../styles/index.css";
 ---
 
 <Layout>
@@ -30,23 +32,25 @@ import "animate.css";
 				class="grid grid-cols-1 gap-5 md:grid-cols-3 mt-20 place-items-center"
 			>
 				<div>
-					<img src="/src/img/ecommerce.png" alt="ecommerce" />
+					<Image src={ecommerce} alt="ecommerce"/>
 					<p class="mt-1 md:mt-3 text-xs md:text-sm">Comercio electrónico</p>
 				</div>
 				<div>
-					<img src="/src/img/website.png" alt="website" />
+					<Image src={website} alt="website"/>
 					<p class="mt-1 md:mt-3 text-xs md:text-sm">Creación de Sitios Web</p>
 				</div>
 				<div>
-					<img src="/src/img/security.png" alt="security" />
-					<p class="mt-1 md:mt-3 text-xs md:text-sm">Seguridad y Estándares de Seguridad</p>
+					<Image src={security} alt="security"/>
+					<p class="mt-1 md:mt-3 text-xs md:text-sm">
+						Seguridad y Estándares de Seguridad
+					</p>
 				</div>
 			</section>
 		</article>
 	</section>
 
-	<img
-		src="/src/img/down-arrow.svg"
+	<Image
+		src={downArrow}
 		alt="arrow"
 		class="mx-auto my-auto w-5 md:w-10 mt-24"
 	/>
@@ -59,7 +63,11 @@ import "animate.css";
 
 		<article class="flex justify-around">
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-14 mt-20">
-				<img src="/src/img/why.png" alt="whyus" class="h-44 md:h-80 mx-auto my-auto" />
+				<Image
+					src={why}
+					alt="whyus"
+					class="h-44 md:h-80 mx-auto my-auto"
+				/>
 
 				<!-- Benefits to hire Momotus -->
 				<Benefits />
@@ -75,14 +83,14 @@ import "animate.css";
 			con una infraestructura segura y robusta.
 		</p>
 		<div class="flex justify-center gap-10 mt-10 mb-16">
-			<img src="/src/img/programming.svg" alt="website" class="w-10 md:w-16" />
-			<img src="/src/img/proton.svg" alt="proton" class="w-24 sm:w-32"/>
-			<img src="/src/img/nextcloud.svg" alt="nextcloud" class="w-10 md:w-16" />
+			<Image src={programming} alt="website" class="w-10 md:w-16" />
+			<Image src={proton} alt="proton" class="w-24 sm:w-32" />
+			<Image src={nextcloud} alt="nextcloud" class="w-10 md:w-16" />
 		</div>
 		<Button link="/services" text="Más información" />
 
-		<img
-			src="/src/img/down-arrow.svg"
+		<Image
+			src={downArrow}
 			alt="arrow"
 			class="mx-auto my-auto w-5 md:w-10 mt-16"
 		/>
@@ -104,6 +112,6 @@ import "animate.css";
 	<Process />
 
 	<section class="flex justify-center mt-10">
-		<Button text="Contactános" link="/contact"/>
+		<Button text="Contactános" link="/contact" />
 	</section>
 </Layout>
